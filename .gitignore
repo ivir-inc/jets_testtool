@@ -1,0 +1,14 @@
+# Build output
+TestTool/build/
+TestTool/dist/
+
+# NetBeans user-local files (contain absolute paths / usernames)
+TestTool/nbproject/private/
+
+# Logs
+logs/
+*.log
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
