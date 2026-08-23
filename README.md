@@ -2,18 +2,24 @@
 
 
 TestTool is a Java Swing application that acts as an HLA (High Level Architecture)
-federate for the MMS (Medical Modeling & Simulation) federation. It is used to
+federate for the Joint Emergency Trauma Simulation (JETS) federation. It is used to
 manually inject, simulate, and monitor federation data — patients, injuries, lab
 results, body fluids, events, and other objects/interactions — for testing other
-federates without needing a full live simulation.
+federates without needing a full live simulation. It is not intended for use in real training exercises.
 
 It connects to a federation using the [Portico](https://github.com/openlvc/portico)
 RTI and the HLA 1516-2010 (Evolved) FOM modules included in this repository.
 
+You can also view and download the [MMS FOM](https://github.com/ivir-inc/jets_mms_fom) separately.
+
+For more information, please contact jets@ivirinc.com
+
+For additional detail on JETS, see https://jets-systems.com/
+
 ## Features
 
 - Join/resign an HLA federation and drive federation lifecycle state
-- Create and update simulated patients, injuries, labs, and body-fluids objects
+- Create, updated, and receive simulated patients, injuries, labs, and body-fluids objects
 - Send and monitor HLA interactions
 - Advance/change simulation time
 - Generate vital-signs data from CSV input
@@ -62,7 +68,7 @@ export RTI_HOME=/home/myuser/portico-2.1.4
 - **`FederateConfig.txt`** — federate/federation names, FOM module URLs, and
   optional CRC host/port overrides.
 - **`gatewayRTI.rid`** — Portico RTI initialization data (logging, network,
-  WAN/gateway settings). Adjust network settings for your environment before use.
+  WAN/gateway settings). Adjust network settings for your environment before use. This is only needed for distributed federations. Local federations use the default **`rti.rid`** provided by the Portico installation.
 
 ## Repository layout
 
